@@ -7,7 +7,7 @@ import  axios  from 'axios'
 import { ThemeProvider, createTheme } from '@mui/material'
 import { QueryClient, QueryClientProvider } from '@tanstack/react-query'
 import { ReactQueryDevtools } from '@tanstack/react-query-devtools'
-axios.defaults.baseURL = import.meta.env.VITE_SERVER_ORIGIN;
+axios.defaults.baseURL = "/api";
 const queryClient = new QueryClient();
 const theme = createTheme({
   palette:{
