@@ -53,7 +53,15 @@ For the ports, I personally run Apache and MySQL using Xampp on their default po
 Apache : 80, 443 
 MySql : 3306 
 So If you use Xampp it should be Ok.
-##### 5) Configure the firebase cloud storage
+
+##### 5) Create & Migrate the database
+All the tables and relations of the database are inside the code, you don't need to worry about creating tables or relations, but you have to run two simple commands, one to create the databse, and the other to migrate the tables and create relations. 
+Inside "Server" folder, open the commandline and run: 
+- npx sequelize-cli db:create.
+- npx sequelize-cli db:migrate.
+
+Now the tables and relations are created in the database that you specified in the config.json file in the previous step.
+##### 6) Configure the firebase cloud storage
 As I said, I use firebase to store the tracks and images that users upload to the website. In order to to that, you need to: 
 - Login to firebase using your google account.
 - Create a project with the name you want.
