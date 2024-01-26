@@ -1,0 +1,33 @@
+@use "../../../variables.scss" as var;
+.auth-buttons{
+  display: flex;
+  gap: 1rem;
+  max-width: fit-content;
+
+  a{
+    display: block;
+    color: var.$color-light;
+    text-decoration: none;
+    font-size: 1rem;
+    font-family: var.$font-title;
+    padding: 1.2rem 1.5rem;
+    height: 1.5rem;
+    font-weight: 500;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    border-radius: 0.5rem;
+    cursor: pointer;
+    &:hover{
+      background-color: var.$color-base-hover;
+      transition: 0.5s;
+    }
+    &:last-child{
+      background-color: var.$color-base;
+      font-weight: 700;
+      &:hover{
+        background-color: var.$color-base-hover;
+      }
+    }
+  }
+}

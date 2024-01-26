@@ -1,0 +1,32 @@
+@use "../../../variables.scss" as var ;
+
+
+.button-back{
+  margin-top: 1rem;
+  a{
+    display: flex;
+    align-items: center;
+    width: fit-content;
+    padding: 0 0.5rem 0 0;
+    text-decoration: none;
+    border-bottom: 0.2rem solid var.$color-bg;
+    svg{
+      font-size: 1.2rem;
+    }
+    span{
+      text-decoration: none;
+      color: var.$color-base;
+      font-size: 1rem;
+      font-weight: 500;
+      font-family: var.$font-text;
+    }
+
+    &:hover{
+      border-bottom: 0.2rem solid var.$color-base;
+    }
+
+  }
+  @media screen and (min-width: var.$screen-tablet){
+    display: none;
+  }
+}

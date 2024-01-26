@@ -1,0 +1,27 @@
+@use "../../../variables.scss" as var;
+
+.topbar{
+  width: 100%;
+  background-color: var.$color-base;
+  padding: 0.5rem 0;
+  display: flex;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  align-items: center;
+  box-shadow: 0 1px 0.5rem rgba($color: var.$color-dark, $alpha: 0.4);
+  .container-wide{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    .auth-buttons{
+      .button-strong{
+        background-color: var.$color-light;
+        color: var.$color-base;
+        &:hover{
+          background-color: var.$color-bg;
+        }
+      }
+    }
+  }
+}

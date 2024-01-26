@@ -1,0 +1,141 @@
+@use "../../../variables.scss" as var ;
+
+.sign-up{
+  background-color: var.$color-bg;
+  width: 100%;
+  height: 100%;
+  .content{
+    margin-top: 2rem;
+    .form-container{
+      width: 100%;
+      border: 0.2rem solid var.$color-base;
+      height: 40rem;
+      border-radius: 0.5rem;
+      display: flex;
+      @media screen and (max-width: var.$screen-tablet){
+        height: 45rem;
+      }
+      .left{
+        width: 50%;
+        height: 100%;
+        background-size: cover;
+        border-radius: 0.5rem 0 0 0.5rem;
+        position: relative;
+        background-position: 10%;
+        border-right: 0.2rem solid var.$color-base;
+        @media screen and (max-width: var.$screen-laptop){
+          display: none;
+        }
+        .overlay-dark{
+          border-radius: 0.5rem 0 0 0.5rem;
+        }
+      }
+      .right{
+        width: 50%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        border-radius: 0 0.5rem 0.5rem 0;
+        gap: 1rem;
+        @media screen and (max-width: var.$screen-laptop){
+          width: 100%;
+        }
+        .title{
+          text-align: center;
+          height: 4rem;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          h2{
+            color: var.$color-base;
+            font-family: var.$font-title;
+            font-size: 2.5rem;
+          }
+        }
+        form{
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          gap: 0.5rem;
+          width: 60%;
+          // height: 50%;
+
+          .form-field{
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            width: 100%;
+            // gap: 1rem;
+            position: relative;
+            svg{
+              color: var.$color-base;
+              position:absolute;
+              top:3rem;
+              left:0.5rem;
+              z-Index : 2;
+            }
+            label{
+              color: var.$color-base;
+              font-family: var.$font-text;
+              font-weight: 400;
+              margin-bottom: 0.7rem;
+            }
+            input[type = email],input[type = password],input[type=text]{
+              width: 100%;
+              height: 2.5rem;
+              border-radius: 0.5rem;
+              outline: none;
+              border: 0.1rem solid var.$color-base;
+              font-size: 1rem;
+              padding: 0 1.7rem;
+              color: var.$color-base-hover;
+              font-weight: 400;
+              font-family: var.$font-text;
+              &:focus{
+                border:0.2rem solid var.$color-base;
+                transition: 0.1s;
+              }
+            }
+            .error{
+              color: rgb(196, 4, 4);
+              font-size: smaller;
+              margin-top: 5px;
+            }
+          }
+          input[type = submit]{
+            padding: 1rem 3rem;
+            font-size: 1rem;
+            color: var.$color-light;
+            font-weight: 600;
+            font-family: var.$font-title;
+            background-color: var.$color-base;
+            outline: none;
+            border: none;
+            border-radius: 0.5rem;
+            margin-top: 1rem;
+            cursor: pointer;
+            &:hover,&:focus{
+              background-color: var.$color-base-hover;
+              transition: 0.2s;
+            }
+          }
+          
+        }
+        p{
+          color: var.$color-base;
+          font-weight: 500;
+          span{
+            a{
+              color: var.$color-base-hover;
+              text-decoration: underline;
+              &:hover{
+                color: var.$color-base;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

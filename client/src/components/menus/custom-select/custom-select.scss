@@ -1,0 +1,90 @@
+@use "../../../variables.scss" as var ;
+
+.filling-div{
+ width: 7rem;
+}
+.custom-select-closed{
+  background-color: var.$color-base-hover;
+  color: var.$color-light;
+  font-family: var.$font-text;
+  font-weight: 600;
+  font-size: 0.9rem;
+  border-radius: 0.5rem;
+  gap:1rem;
+  display: flex;
+  align-items: flex-start;
+  cursor: pointer;
+
+  ul{
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    .first-element{
+      display: flex;
+      width: 7rem;
+      justify-content: center;
+      gap: 0.5rem;
+      border: none;
+      &:hover{
+        border-radius: 0.5rem;
+        transition: 0.2s;
+      }
+    }
+    li{
+      display: none;
+      padding: 0.7rem 1rem;
+      border-bottom: 0.1rem solid var.$color-base;
+      &:hover{
+        background-color: var.$color-base;
+        transition: 0.2s;
+      }
+      &:first-child{
+        border-radius: 0.5rem 0.5rem 0 0;
+      }
+      &:last-child{
+        border-radius: 0 0 0.5rem 0.5rem;
+        border-bottom: none;
+      }
+    }
+  }
+}
+.custom-select-opened{
+  top: 0;
+  background-color: var.$color-base-hover;
+  color: var.$color-light;
+  font-family: var.$font-text;
+  font-weight: 600;
+  font-size: 0.9rem;
+  border-radius: 0.5rem;
+  gap:1rem;
+  display: flex;
+  align-items: flex-start;
+  cursor: pointer;
+  position: absolute;
+  left: 3.8rem;
+  top:0;
+  ul{
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    .first-element{
+      display: flex;
+      gap: 0.5rem;
+    }
+    li{
+      padding: 1rem;
+      border-bottom: 0.1rem solid var.$color-base;
+      &:hover{
+        background-color: var.$color-base;
+        transition: 0.2s;
+      }
+      &:first-child{
+        border-radius: 0.5rem 0.5rem 0 0;
+      }
+      &:last-child{
+        border-radius: 0 0 0.5rem 0.5rem;
+        border-bottom: none;
+      }
+    }
+  }
+}

@@ -1,0 +1,24 @@
+@use "../../../variables.scss" as var;
+
+.user-icon{
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  position: relative;
+  p{
+    color: var.$color-light;
+    font-family: var.$font-title;
+    font-weight: 700;
+  }
+  img{
+    width: 2.5rem;
+    height: 2.5rem;
+    border-radius: 50%;
+    object-fit: cover;
+    cursor: pointer;
+    &:hover{
+      border: 0.2rem solid var.$color-light;
+      transition: 0.1s;
+    }
+  }
+}

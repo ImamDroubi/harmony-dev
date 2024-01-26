@@ -1,0 +1,124 @@
+@use "../../../variables.scss" as var ;
+
+.sidebar{
+  width: 20%;
+  height: 100%;
+  display: flex;
+  overflow-y: scroll;
+  flex-direction: column;
+  gap: 1rem;
+  background-color: var.$color-light;
+  color: var.$color-base;
+  border-right: 0.1rem solid var.$color-base;
+  // box-shadow: 0.5px 0 0.2rem rgba($color: var.$color-dark, $alpha: 0.4);
+  &::-webkit-scrollbar{
+    display: none;
+  }
+  .category{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    .title{
+      text-decoration: underline;
+      // background-color: var.$color-bg;
+      font-family: var.$font-title;
+      text-transform: uppercase;
+      padding: 1rem 0 1rem 1.5rem;
+      font-size: 1.2rem;
+      font-weight: 500;
+    }
+
+    ul{
+      display: flex;
+      width: 100%;
+      flex-direction: column;
+      list-style: none;
+      li{
+        width: 100%;
+        a{
+          height: 100%;
+          display: block;
+          width: 100%;
+          padding: 1rem 0 1rem 1.5rem;
+          color: var.$color-base;
+          border-bottom: 0.1rem solid var.$color-bg;
+          font-family: var.$font-text;
+          font-weight: 400;
+          font-size: 1rem;
+          &:hover{
+            background-color: var.$color-bg;
+            transition: 0.2s;
+          }
+          svg{
+            padding-right: 0.5rem;
+          }
+          
+        }
+        .active{
+          background-color: var.$color-bg;
+        }
+      }
+    }
+  }
+  @media screen and (max-width: var.$screen-laptop){
+    width: 30%;
+  }
+}
+.sidebar-mobile{
+  width: 10%;
+  display: flex;
+  overflow-y: scroll;
+  flex-direction: column;
+  align-items: center;
+  background-color: var.$color-base;
+  color: var.$color-base;
+  gap: 3rem;
+  border-right: 0.1rem solid var.$color-base;
+  // box-shadow: 0.5px 0 0.2rem rgba($color: var.$color-dark, $alpha: 0.4);
+  &::-webkit-scrollbar{
+    display: none;
+  }
+  .category{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    ul{
+      display: flex;
+      width: 100%;
+      flex-direction: column;
+      list-style: none;
+      li{
+        width: 100%;
+        
+        a{
+          height: 100%;
+          display: block;
+          width: 100%;
+          padding: 1rem 0;
+          color: var.$color-light;
+          display: flex;
+          align-items: center;
+          flex-direction: column;
+          border-bottom: 0.1rem solid var.$color-bg;
+          font-family: var.$font-text;
+          font-weight: 400;
+          font-size: 1rem;
+          &:hover{
+            background-color: var.$color-bg;
+            transition: 0.2s;
+          }
+          svg{
+            padding-right: 0.5rem;
+          }
+          
+        }
+        .active{
+          background-color: var.$color-bg;
+          color:var.$color-base;
+        }
+      }
+    }
+  }
+
+}

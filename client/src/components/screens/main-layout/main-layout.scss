@@ -1,0 +1,74 @@
+@use "../../../variables.scss" as var; 
+
+.main-layout{
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  background-color: var.$color-bg;
+  justify-content: stretch;
+  .container-wide{
+    width: 89%;
+  }
+  main{
+    height: 100%;
+    overflow: hidden;
+    display: flex;
+    .content{
+      width: 80%;
+      overflow-y: scroll;
+
+      
+      @media screen and (max-width: var.$screen-laptop){
+        width: 100%;
+        .track-flexible{
+          width: 48%;
+        }
+        .tracks{
+          gap: 0;
+          row-gap: 2rem;
+          .track{
+            width: 48%;
+          }
+        }
+        .combinations{
+          gap: 2rem;
+          row-gap: 2rem;
+          .combination{
+            width: 45%;
+          }
+        }
+        .upload{
+          right: 1.5rem;
+        }
+      }
+      @media screen and (max-width: var.$screen-tablet){
+        width: 100%;
+        .top{
+          flex-direction: column;
+          .search{
+            margin-top: 1rem;
+          }
+        }
+        .description{
+          p{
+            text-align: center;
+          }
+        }
+        .track-flexible{
+          width: 100%;
+        }
+        .tracks{
+          .track{
+            width: 100%;
+          }
+        }
+        .combinations{
+          .combination{
+            width: 100%;
+          }
+        }
+      }
+    }
+  }
+}

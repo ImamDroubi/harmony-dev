@@ -1,0 +1,22 @@
+@use "../../../variables.scss" as var;
+
+.button-strong{
+  background-color: var.$color-base;
+  padding: 1.2rem 1.5rem;
+  font-size: 1rem;
+  color: var.$color-light;
+  min-width: 7rem;
+  height: 1.5rem;
+  border: none;
+  border-radius: 0.5em;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  font-family: var.$font-title, sans-serif;
+  font-weight: 700;
+  cursor: pointer;
+  &:hover{
+    background-color: var.$color-base-hover;
+    transition: 0.3s;
+  }
+}

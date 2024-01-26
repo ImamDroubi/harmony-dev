@@ -1,0 +1,25 @@
+@use "../../../variables.scss" as var ;
+
+.popup-layout{
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 100;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  @media screen and (max-width: var.$screen-laptop){
+    .popup-save-combination,.popup-add-to-mixing-zone,.edit-track,.upload-track{
+      width: 80%;
+      padding-bottom: 0.5rem;
+      
+    }
+  }
+  @media screen and (max-width: var.$screen-tablet){
+    .popup-save-combination,.popup-add-to-mixing-zone,.popup-upload-track{
+      width: 90%;
+    }
+  }
+}

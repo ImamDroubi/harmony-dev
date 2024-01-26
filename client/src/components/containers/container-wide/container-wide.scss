@@ -1,0 +1,8 @@
+@use "../../../variables.scss" as var;
+.container-wide{
+  width: var.$container-width;
+  margin: auto;
+  @media screen and (max-width: var.$screen-tablet){
+    width: 95%;
+  }
+}

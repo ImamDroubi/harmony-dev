@@ -1,0 +1,78 @@
+@use "../../../variables.scss" as var; 
+
+.mixing-zone{
+  .container-wide{
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+  }
+  header{
+    width: 100%;
+    .top{
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1rem 0;
+      h2{
+        color: var.$color-base;
+        text-transform: uppercase;
+        font-family: var.$font-title;
+        font-weight: 500;
+        font-size: 2rem;
+      }
+      .search{
+        position: relative;
+        svg{
+          position: absolute;
+          color: var.$color-base;
+          font-size: 1.3rem;
+          top: 0.4rem;
+          left: 0.4rem;
+        }
+        input[type=text]{
+          height: 2rem;
+          border-radius: 0.5rem;
+          outline: none;
+          border: 0.1rem solid var.$color-base;
+          font-size: 1rem;
+          padding: 0 1.7rem;
+          color: var.$color-base-hover;
+          font-weight: 400;
+          font-family: var.$font-text;
+          &:focus{
+            border:0.2rem solid var.$color-base;
+            transition: 0.1s;
+          }
+        }
+      }
+    }
+    .description{
+      p{
+        color: var.$color-base-hover;
+        font-family: var.$font-text;
+        font-weight: 300;
+        font-size: 1.1rem;
+      }
+    }
+  }
+  .tracks{
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    justify-content: space-between;
+    row-gap: 1rem;
+    .track-flexible{
+      width: 32%;
+    }
+    h3{
+      font-family: var.$font-text;
+      color: var.$color-base-hover;
+      font-weight: 400;
+      
+    }
+    .extra{
+      width: 30%;
+    }
+  }
+}

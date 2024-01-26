@@ -1,0 +1,44 @@
+@use "./variables.scss" as var;
+html,body{
+  height: 100vh;
+  overflow-x: hidden;
+}
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  z-index: 1;
+  font-family: "Raleway";
+  a{
+    text-decoration: none;
+  }
+}
+:root{
+  @media screen and (max-width: var.$screen-tablet){
+    font-size: 12px;
+  }
+}
+#root{
+  height: 100vh;
+}
+::-webkit-scrollbar{
+    background: none;
+    width: 0.5rem;
+    height: 0.5rem;
+}
+::-webkit-scrollbar-track{
+  background: none;
+}
+::-webkit-scrollbar-thumb{
+  background: var.$color-base-hover;
+  border-radius: 0.5rem;
+}
+::-webkit-scrollbar-thumb:hover{
+  background: var.$color-base;
+}
+// animations 
+@keyframes slide-down {
+  from{transform: translateY(-1rem);}
+  to{transform: translateY(0);}
+}
+

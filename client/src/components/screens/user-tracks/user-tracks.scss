@@ -1,0 +1,116 @@
+@use "../../../variables.scss" as var; 
+
+.user-tracks{
+  
+  .container-wide{
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+  }
+  .upload{
+    padding: 1.5rem;
+    width: 4rem;
+    height: 4rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    float: right;
+    background-color: var.$color-base-hover;
+    color: var.$color-light;
+    border-radius: 50%;
+    font-size: 1.2rem;
+    position: fixed;
+    bottom: 2rem;
+    right: 5rem;
+    box-shadow: 0.1rem 0.1rem 0.3rem rgba($color: var.$color-dark, $alpha: 1.0);
+    cursor: pointer;
+    &:hover{
+      background-color: var.$color-base;
+    }
+  }
+  header{
+    width: 100%;
+    .top{
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1rem 0;
+      h2{
+        color: var.$color-base;
+        text-transform: uppercase;
+        font-family: var.$font-title;
+        font-weight: 500;
+        font-size: 2rem;
+      }
+      .search{
+        position: relative;
+        svg{
+          position: absolute;
+          color: var.$color-base;
+          font-size: 1.3rem;
+          top: 0.4rem;
+          left: 0.4rem;
+        }
+        input[type=text]{
+          height: 2rem;
+          border-radius: 0.5rem;
+          outline: none;
+          border: 0.1rem solid var.$color-base;
+          font-size: 1rem;
+          padding: 0 1.7rem;
+          color: var.$color-base-hover;
+          font-weight: 400;
+          font-family: var.$font-text;
+          &:focus{
+            border:0.2rem solid var.$color-base;
+            transition: 0.1s;
+          }
+        }
+      }
+    }
+    .description{
+      p{
+        color: var.$color-base-hover;
+        font-family: var.$font-text;
+        font-weight: 300;
+        font-size: 1.1rem;
+      }
+    }
+    .filter{
+      display: flex;
+      justify-content: flex-end;
+      width: 100%;
+      .category{
+        display: flex;
+        margin-top: 1rem;
+        gap: 1rem;
+        align-items: center;
+        position: relative;
+        height: 2rem;
+        z-index: 5;
+        p{
+          font-size: 1rem;
+          color: var.$color-base-hover;
+          font-family: var.$font-title;
+          font-weight: 700;
+        }
+      }
+      
+    }
+    
+    
+  }
+  .tracks{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap; 
+    justify-content: space-between;
+    gap: 2rem;
+    z-index: 0;
+    padding-bottom: 2rem;
+    .extra{
+      width: 30%;
+    }
+  }
+}

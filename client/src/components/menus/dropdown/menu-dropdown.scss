@@ -1,0 +1,43 @@
+@use "../../../variables.scss" as var;
+.menu-dropdown{
+  position: absolute;
+  background-color: var.$color-light;
+  list-style: none;
+  min-width: 12rem;
+  border-radius: 0.5rem;
+  top: 2rem;
+  right: 1rem;
+  animation-name: slide-down;
+  animation-duration: 0.5s;
+  z-index: 10;
+  li{
+    a{
+      display: block;
+      font-family: var.$font-text;
+      text-decoration: none;
+      color: var.$color-base;
+      width: 100%;
+      padding: 0.5rem;
+      border-bottom: 1px solid var.$color-bg;
+      transition: 0.2s;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      &:hover{
+        background-color: var.$color-bg;
+      }
+    }
+    &:first-child{
+      a{
+        border-radius: 0.5rem 0.5rem 0 0 ;
+      }
+    }
+    &:last-child{
+      a{
+        border-radius: 0 0 0.5rem 0.5rem;
+        border-bottom: none;
+      }
+    }
+  }
+}
