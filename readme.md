@@ -24,7 +24,10 @@ This repository is for developers who want to run the website on their machines 
 #### How To Use
 As I said this is for developers to run in their own machines, so there are a few changes that you have to make after cloning the repository. 
 ##### 1) Clone the repository
-To clone the repository into your machine, create an empty folder, open the commandline inside of it and run the command: git clone https://github.com/ImamDroubi/harmony-dev.git .
+To clone the repository into your machine, create an empty folder, open the commandline inside of it and run the command: 
+
+git clone https://github.com/ImamDroubi/harmony-dev.git .
+
 This will install the respository to your machine. 
 ##### 2) Install node modules
 You have two folders: "Client" & "Server", "Client" has the forntend code and "Server" has the backend code, but in order for the code to work you have to install the dependencies for each one of them. 
